@@ -7,11 +7,11 @@ const getPlayerName = () => {
   }
   range1 = 1;
   range2 = 2;
-  let guessedNumber = prompt("kindly guess a number", "");
-  return getNumber(range1,range2,guessedNumber,userDetails)
+  let userInput = prompt("kindly guess a number", "");
+  return guessNumber(range1,range2,userInput,userDetails)
 }
 
-const getNumber = (range1,range2,userInput,userDetails)=>{
+const guessNumber = (range1,range2,userInput,userDetails) => {
   userLevel = userDetails.level
   range2 = userLevel > 1 ? userLevel-- : range2
   let rand = randomNumber(range1,range2)
@@ -30,3 +30,6 @@ const randomNumber = (range1,range2) => {
 }
 
 getPlayerName();
+
+//comments
+// was not able to work with cookies.. had issues a couple issues, due to deadline.. had to scrap it
